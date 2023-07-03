@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/app.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
     <title>alchemy | IEDC | CEAL</title>
 </head>
 
@@ -23,7 +23,7 @@
             <span class="material-symbols-sharp">
                 charger
             </span>
-            <p>Powered by Tabbed Web App</p>
+            <p>Powered by&nbsp;<span style="font-weight: 900;">Tabbed Web App</span></p>
         </div>
     </div>
 
@@ -31,18 +31,28 @@
         <header class="header">
             <img src="/assets/alchemy.png" id="headerIMG">
 
-            <div class="nav">
-                <a href="/">
+
+            <div id="openNav">
+                <span class="material-symbols-sharp">
+                    menu
+                </span>
+            </div>
+            <div class="nav" id="navi">
+                <a href="">
                     <p>Home</p>
                 </a>
                 <a href="#about">
                     <p>About</p>
                 </a>
+                <a href="#events">
+                    <p>Events</p>
+                </a>
+
                 <a href="/team.html">
                     <p>Team</p>
 
                 </a>
-                <a href="#join">
+                <a href="#joinUs">
                     <p class="joinx">JOIN</p>
 
                 </a>
@@ -60,6 +70,23 @@
             <h2 id="innovTXT">Brewing <span class="textGrad">Innovation</span>.
             </h2>
 
+            <div style="    width: 100%;
+                        height: 3vh;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        justify-content: center;
+                        align-items: center;">
+                <h1 style="font-size: 18px;color: rgb(255, 255, 255);    font-size: 18px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-content: center;
+    align-items: center;">Join us here.
+                    <button class="material-symbols-sharp joinBoi">input</button>
+                </h1>
+            </div>
+
             <div style="position: absolute;bottom: 2px;" id="chevron"><span class="material-symbols-sharp"
                     style="color: #01ffaa;">
                     expand_more
@@ -67,6 +94,7 @@
         </div>
     </div>
     <div class="main color-black align-top padding-top">
+        <div id="about" style="transform: translateY(-70px);"></div>
         <h1>What is IEDC?</h1>
         <p style="text-align: center;font-size: 18px;width: 90vw;">
             Innovation and Entrepreneurship Development Centre (IEDC) is a flagship initiative of Kerala Startup Mission
@@ -80,7 +108,7 @@
         <span class="material-symbols-sharp" style="font-size: 32px;color: #c45eff;">
             steppers
         </span>
-        <h1 id="about">What is <span class="textGrad">alchemy</span> ?</h1>
+        <h1>What is <span class="textGrad">alchemy</span> ?</h1>
 
         <p style="text-align: center;font-size: 18px;width: 90vw;">
             alchemy is the IEDC of College of Engineering Attingal. We are a group of students who are passionate about
@@ -88,7 +116,8 @@
             and to facilitate Innovation and Entrepreneurship among our peers.
         </p>
 
-        <span class="material-symbols-sharp" style="font-size: 32px;color: #c45eff;transform: rotate(180deg);">
+        <span class="material-symbols-sharp" style="font-size: 32px;color: #c45eff;transform: rotate(180deg);"
+            id="joinUs">
             steppers
         </span>
 
@@ -103,16 +132,218 @@
     justify-content: center;
     align-items: center;">
             <h1>Join us here.</h1>
-            <button id="join" class="material-symbols-sharp">input</button>
+            <button class="material-symbols-sharp joinBoi">input</button>
+        </div>
+
+    </div>
+    <div class="main color-white align-middle" style="    background: #000000;
+    height: 100vh;
+    position: relative;">
+
+        <div id="events" style="transform: translateY(-120px);"></div>
+        <h1 style="transform: translateY(-37px);">Events</h1>
+        <div class="tileHolder">
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+                <div class="tileContent">
+                    <h2>Perfect Pixel</h2>
+                    <p>An Offline Workshop on Graphic Designing</p>
+                    <div class="chipletIsle">
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                event
+                            </span>
+                            <p>Event</p>
+                        </div>
+                        <div class="chiplet" style="width: 60px;">
+                            <span class="material-symbols-sharp">
+                                palette
+                            </span>
+                            <p>Workshop</p>
+                        </div>
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                wifi_off
+                            </span>
+                            <p>Offline</p>
+                        </div>
+                    </div>
+                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
+                </div>
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+                <div class="tileContent">
+                    <h2>Perfect Pixel</h2>
+                    <p>An Offline Workshop on Graphic Designing</p>
+                    <div class="chipletIsle">
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                event
+                            </span>
+                            <p>Event</p>
+                        </div>
+                        <div class="chiplet" style="width: 60px;">
+                            <span class="material-symbols-sharp">
+                                palette
+                            </span>
+                            <p>Workshop</p>
+                        </div>
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                wifi_off
+                            </span>
+                            <p>Offline</p>
+                        </div>
+                    </div>
+                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
+                </div>
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+                <div class="tileContent">
+                    <h2>Perfect Pixel</h2>
+                    <p>An Offline Workshop on Graphic Designing</p>
+                    <div class="chipletIsle">
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                event
+                            </span>
+                            <p>Event</p>
+                        </div>
+                        <div class="chiplet" style="width: 60px;">
+                            <span class="material-symbols-sharp">
+                                palette
+                            </span>
+                            <p>Workshop</p>
+                        </div>
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                wifi_off
+                            </span>
+                            <p>Offline</p>
+                        </div>
+                    </div>
+                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
+                </div>
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+                <div class="tileContent">
+                    <h2>Perfect Pixel</h2>
+                    <p>An Offline Workshop on Graphic Designing</p>
+                    <div class="chipletIsle">
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                event
+                            </span>
+                            <p>Event</p>
+                        </div>
+                        <div class="chiplet" style="width: 60px;">
+                            <span class="material-symbols-sharp">
+                                palette
+                            </span>
+                            <p>Workshop</p>
+                        </div>
+                        <div class="chiplet">
+                            <span class="material-symbols-sharp">
+                                wifi_off
+                            </span>
+                            <p>Offline</p>
+                        </div>
+                    </div>
+                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
+                </div>
+            </div>
         </div>
 
     </div>
 
-    <!-- Use class box for other content -->
-    <!-- also if you create new styles do not edit the app.css file , instead create a new css file inside '/pages/css/' 
-        and link it to your page-->
-    <!-- do not edit anything here -->
-    <!-- duplicate and rename 'temp_file.html' inside '/pages' folder and edit it as needed -->
+    <div class="main color-black align-middle" style="height: 100vh;">
+
+        <p style="margin: 0px;">Partners and Associates</p>
+        <h1 style="margin: 0px;font-size: 42px;">Sponsors</h1>
+
+        <div class="row" style="    width: 90vw;
+    gap: 24px;
+    justify-content: center;">
+
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/gdsc.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/gok.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/iedc.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/nasscom.jpg');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/tie.jpeg');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div style="    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 34vw;
+    align-items: center;
+    color: white;
+    align-content: center;">
+            <h2 class="textGrad">alchemy&nbsp;</h2>
+            <img src="/assets/footerLogo.png">
+            <h2>IEDC | CEAL</h2>
+
+        </div>
+        <div style=" 
+            height: 100%;
+    width: 92vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;">
+            <div class="footerButtons">
+                <div onclick="location.href = 'https://goo.gl/maps/jtRX6p1LNxL39htLA'">
+                    <span class="material-symbols-sharp textGrad" style="font-size:20px;">
+                        near_me</span>
+                    <p>
+                        Directions
+                    </p>
+                </div>
+                <div>
+                    <span class="material-symbols-sharp textGrad" style="font-size:20px;">
+                        input</span>
+                    <p>
+                        Join Us
+                    </p>
+                </div>
+                follow us here:
+                <a class="fa-brands fa-linkedin textGrad" style="font-size: 28px;"
+                    href="https://www.linkedin.com/company/innovation-and-entrepreneurship-development-cell-iedc-ceal/"></a>
+                <a class="fa-brands fa-instagram textGrad" style="font-size: 28px;"
+                    href="https://www.instagram.com/iedc_ceal/"></a>
+                <a class="fa-brands fa-facebook textGrad" style="font-size: 28px;"
+                    href="https://www.facebook.com/p/IEDC-College-of-Engineering-Attingal-100065200363274/"></a>
+                <a class="fa-brands fa-youtube textGrad" style="font-size: 28px;"
+                    href="https://www.youtube.com/@IEDCCEAL"></a>
+                <a class="fa-brands fa-github textGrad" style="font-size: 28px;"
+                    href="https://github.com/IEDC-CEAL"></a>
+                <a class="fa-solid fa-envelope textGrad" style="font-size: 28px;" href="mailto:iedcceal@gmail.com"></a>
+
+
+            </div>
+        </div>
+
+    </footer>
 
     <script src="/app.js"></script>
 </body>
