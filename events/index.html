@@ -18,7 +18,13 @@
 
 
 
-<body style="background-color: black;width: 100vw;height: 100vh;color: white;animation: none;">
+<body style="    background: linear-gradient(34deg,#000000a8,#4e005680),url(/assets/r2.jpeg);
+    width: 100vw;
+    height: 140vh;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s forwards 0s;">
 
     <header class="header">
         <img src="/assets/alchemy.png" id="headerIMG">
@@ -30,7 +36,7 @@
             </span>
         </div>
         <div class="nav" id="navi">
-            <a href="">
+            <a href="/">
                 <p>Home</p>
             </a>
 
@@ -39,28 +45,19 @@
     </header>
 
 
-    <div class="main align-middle color-white"
-        style="position: absolute ;top: 8vh;left: 50%;transform: translateX(-50%);">
-        <h1 style="font-size: 64px;
-                margin:12px 8px 24px 8px ;text-align: center; ">
+    <div class="main align-middle color-white eventPage">
+        <h1 style="font-size: 64px;opacity: 0;
+                margin:12px 8px 24px 8px ;text-align: center; animation: mainAnim 1s forwards 0.4s">
             Perfect Pixel
         </h1>
 
-        <div class="row" style="    width: 68vw;
-    gap: 24px;
-    justify-content: space-between;">
-            <img src=" /assets/posters/PerfectPixelPoster.jpg"
-                style="height: 400px;width: 400px;border-radius: 12px;box-shadow: 0px 0px 24px 8px #ff38ff;" />
-            <div style="    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    align-items: center;">
+        <div class="eventBox">
+            <div></div>
+
+            <div>
                 24-25 June 2023
                 <br>
-                College of Engineering Attingal
+                College of Engineering,Attingal
 
 
                 <div class="chipletIsle" style="justify-content: center;">
@@ -83,7 +80,7 @@
                         <p>Offline</p>
                     </div>
                 </div>
-                <p style="width: 100%;text-align: center;
+                <p style="width: 80%;text-align: center;
                             margin-top:22px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     accusantium doloremque laudantium, totam rem
                     aperiam,
@@ -103,6 +100,7 @@
 
     </div>
 
+    <script src="/app.js"></script>
 
 
 </body>

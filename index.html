@@ -81,6 +81,8 @@
                 <h1 style="font-size: 18px;color: rgb(255, 255, 255);    font-size: 18px;
     color: rgb(255, 255, 255);
     display: flex;
+    opacity: 0;
+    animation: mainAnim 1.5s forwards 1.4s;
     align-content: center;
     align-items: center;">Join us here.
                     <button class="material-symbols-sharp joinBoi">input</button>
@@ -136,124 +138,46 @@
         </div>
 
     </div>
-    <div class="main color-white align-middle" style="    background: #000000;
-    height: 100vh;
-    position: relative;">
+    <div class="main color-white align-middle" style="     background: #000000;
+    height:unset;
+    position: relative;
+    padding: 120px 0px;">
 
         <div id="events" style="transform: translateY(-120px);"></div>
-        <h1 style="transform: translateY(-37px);">Events</h1>
+        <h1 style="transform: translateY(-37px);font-size: 42px;">
+            <p
+                style='font-size: 16px;margin: 0px;text-align: center;color: rgba(255, 255, 255, 0.678);font-weight: 200;'>
+                Pinboard</p>
+            Events
+        </h1>
         <div class="tileHolder">
-            <div class="tile">
+
+            <div class="tile" onclick="location.href='/events/'">
                 <img src="/assets/posters/PerfectPixelPoster.jpg" />
-                <div class="tileContent">
-                    <h2>Perfect Pixel</h2>
-                    <p>An Offline Workshop on Graphic Designing</p>
-                    <div class="chipletIsle">
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                event
-                            </span>
-                            <p>Event</p>
-                        </div>
-                        <div class="chiplet" style="width: 60px;">
-                            <span class="material-symbols-sharp">
-                                palette
-                            </span>
-                            <p>Workshop</p>
-                        </div>
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                wifi_off
-                            </span>
-                            <p>Offline</p>
-                        </div>
-                    </div>
-                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
-                </div>
             </div>
             <div class="tile">
                 <img src="/assets/posters/PerfectPixelPoster.jpg" />
-                <div class="tileContent">
-                    <h2>Perfect Pixel</h2>
-                    <p>An Offline Workshop on Graphic Designing</p>
-                    <div class="chipletIsle">
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                event
-                            </span>
-                            <p>Event</p>
-                        </div>
-                        <div class="chiplet" style="width: 60px;">
-                            <span class="material-symbols-sharp">
-                                palette
-                            </span>
-                            <p>Workshop</p>
-                        </div>
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                wifi_off
-                            </span>
-                            <p>Offline</p>
-                        </div>
-                    </div>
-                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
-                </div>
             </div>
             <div class="tile">
                 <img src="/assets/posters/PerfectPixelPoster.jpg" />
-                <div class="tileContent">
-                    <h2>Perfect Pixel</h2>
-                    <p>An Offline Workshop on Graphic Designing</p>
-                    <div class="chipletIsle">
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                event
-                            </span>
-                            <p>Event</p>
-                        </div>
-                        <div class="chiplet" style="width: 60px;">
-                            <span class="material-symbols-sharp">
-                                palette
-                            </span>
-                            <p>Workshop</p>
-                        </div>
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                wifi_off
-                            </span>
-                            <p>Offline</p>
-                        </div>
-                    </div>
-                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
-                </div>
             </div>
             <div class="tile">
                 <img src="/assets/posters/PerfectPixelPoster.jpg" />
-                <div class="tileContent">
-                    <h2>Perfect Pixel</h2>
-                    <p>An Offline Workshop on Graphic Designing</p>
-                    <div class="chipletIsle">
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                event
-                            </span>
-                            <p>Event</p>
-                        </div>
-                        <div class="chiplet" style="width: 60px;">
-                            <span class="material-symbols-sharp">
-                                palette
-                            </span>
-                            <p>Workshop</p>
-                        </div>
-                        <div class="chiplet">
-                            <span class="material-symbols-sharp">
-                                wifi_off
-                            </span>
-                            <p>Offline</p>
-                        </div>
-                    </div>
-                    <i>24-25 June 2023 <span style="font-style: normal;color: black;font-weight: 900;">@ CEAL</span></i>
-                </div>
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+            </div>
+            <div class="tile">
+                <img src="/assets/posters/PerfectPixelPoster.jpg" />
             </div>
         </div>
 
@@ -269,13 +193,13 @@
     justify-content: center;">
 
             <div class="sponsors"
-                style="background: url('/assets/sponsors/gdsc.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
-            </div>
-            <div class="sponsors"
                 style="background: url('/assets/sponsors/gok.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
             </div>
             <div class="sponsors"
                 style="background: url('/assets/sponsors/iedc.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
+            </div>
+            <div class="sponsors"
+                style="background: url('/assets/sponsors/gdsc.png');background-position:center ;background-size:contain;background-repeat: no-repeat;">
             </div>
             <div class="sponsors"
                 style="background: url('/assets/sponsors/nasscom.jpg');background-position:center ;background-size:contain;background-repeat: no-repeat;">
@@ -290,27 +214,13 @@
     </div>
 
     <footer>
-        <div style="    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 34vw;
-    align-items: center;
-    color: white;
-    align-content: center;">
-            <h2 class="textGrad">alchemy&nbsp;</h2>
-            <img src="/assets/footerLogo.png">
-            <h2>IEDC | CEAL</h2>
+        <div class="alchemyHolder">
+
+            <img src="/assets/alchemy.png">
+
 
         </div>
-        <div style=" 
-            height: 100%;
-    width: 92vw;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;">
+        <div class="footWear">
             <div class="footerButtons">
                 <div onclick="location.href = 'https://goo.gl/maps/jtRX6p1LNxL39htLA'">
                     <span class="material-symbols-sharp textGrad" style="font-size:20px;">
@@ -326,20 +236,24 @@
                         Join Us
                     </p>
                 </div>
-                follow us here:
-                <a class="fa-brands fa-linkedin textGrad" style="font-size: 28px;"
-                    href="https://www.linkedin.com/company/innovation-and-entrepreneurship-development-cell-iedc-ceal/"></a>
-                <a class="fa-brands fa-instagram textGrad" style="font-size: 28px;"
-                    href="https://www.instagram.com/iedc_ceal/"></a>
-                <a class="fa-brands fa-facebook textGrad" style="font-size: 28px;"
-                    href="https://www.facebook.com/p/IEDC-College-of-Engineering-Attingal-100065200363274/"></a>
-                <a class="fa-brands fa-youtube textGrad" style="font-size: 28px;"
-                    href="https://www.youtube.com/@IEDCCEAL"></a>
-                <a class="fa-brands fa-github textGrad" style="font-size: 28px;"
-                    href="https://github.com/IEDC-CEAL"></a>
-                <a class="fa-solid fa-envelope textGrad" style="font-size: 28px;" href="mailto:iedcceal@gmail.com"></a>
+                <hr style="width: 100%;">
+                <!-- <br style="width: 100%;"> -->
+                <div id="footerDiv">
+                    follow us here:
+                    <a class="fa-brands fa-linkedin textGrad" style="font-size: 28px;"
+                        href="https://www.linkedin.com/company/innovation-and-entrepreneurship-development-cell-iedc-ceal/"></a>
+                    <a class="fa-brands fa-instagram textGrad" style="font-size: 28px;"
+                        href="https://www.instagram.com/iedc_ceal/"></a>
+                    <a class="fa-brands fa-facebook textGrad" style="font-size: 28px;"
+                        href="https://www.facebook.com/p/IEDC-College-of-Engineering-Attingal-100065200363274/"></a>
+                    <a class="fa-brands fa-youtube textGrad" style="font-size: 28px;"
+                        href="https://www.youtube.com/@IEDCCEAL"></a>
+                    <a class="fa-brands fa-github textGrad" style="font-size: 28px;"
+                        href="https://github.com/IEDC-CEAL"></a>
+                    <a class="fa-solid fa-envelope textGrad" style="font-size: 28px;"
+                        href="mailto:iedcceal@gmail.com"></a>
 
-
+                </div>
             </div>
         </div>
 
