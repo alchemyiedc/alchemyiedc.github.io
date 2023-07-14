@@ -860,6 +860,290 @@ a:hover::after {
   cursor: default;
 }
 
+.teamPage {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 250px);
+  grid-gap: 12px;
+  height: 120vh;
+  color: #fff;
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+  width: 98vw;
+}
+.teamBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  border-radius: 24px;
+  /* padding: 12px; */
+  gap: 12px;
+  transition: 400ms;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.r2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #ff0000;
+  border-radius: 24px;
+  /* padding: 12px; */
+  gap: 12px;
+  transition: 400ms;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.double {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgb(57, 255, 143);
+  border-radius: 24px;
+  /* padding: 12px; */
+  gap: 12px;
+  transition: 400ms;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.r1 {
+  background: #0088ff;
+}
+.r3 {
+  background: rgb(57, 255, 143);
+}
+
+.r1 .r2 .r3 .r4 .double {
+  transition: 400ms;
+}
+.teamBox > h1 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-10%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+}
+
+.teamBox > h4 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  font-size: 12px;
+  transform: translate(-40%, 140%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+}
+.teamBox > img {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 400ms;
+}
+/* <-------------------------------> */
+.r2 > h1 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-90%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+}
+.r2 > h4 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  font-size: 12px;
+  transform: translate(-90%, 140%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+}
+.r2 > img {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 400ms;
+}
+
+.double > #g1 {
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  transform: translateX(-80%);
+  transition: 400ms;
+}
+.double > #g2 {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  transform: translateX(-30%) translateY(20%);
+  transition: 400ms;
+}
+.double > h1 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-70%) translateY(-54%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+  z-index: 6;
+}
+.double > h4 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-40%, 10%);
+  opacity: 0;
+  transition: 400ms;
+  font-size: 15px;
+  filter: blur(3px);
+  z-index: 6;
+}
+
+.double > h2 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  scale: 0.8;
+  font-size: 32px;
+  transform: translateX(-10%) translateY(80%);
+  opacity: 0;
+  transition: 400ms;
+  filter: blur(3px);
+  z-index: 5;
+}
+
+.double:hover {
+  box-shadow: 0px 0px 20px 0px rgb(57, 255, 143);
+}
+.double:hover > h1 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-54%);
+  filter: blur(0px);
+}
+.double:hover > h4 {
+  opacity: 1;
+  transform: translate(-50%, 10%);
+  filter: blur(0px);
+  scale: 1;
+}
+.double:hover > h2 {
+  opacity: 1;
+  transform: translateX(-60%) translateY(80%);
+  filter: blur(0px);
+}
+
+/* <------------------------> */
+.r2:hover > img {
+  transform: translateX(-102%);
+  filter: blur(3px);
+  scale: 1.1;
+}
+
+.teamBox:hover > img {
+  transform: translateX(15%);
+  filter: blur(3px);
+  scale: 1.1;
+}
+.double:hover > #g1 {
+  transform: translateX(-102%);
+  filter: blur(3px);
+  scale: 1.1;
+}
+.double:hover > #g2 {
+  transform: translateX(10%) translateY(20%);
+  filter: blur(3px);
+  scale: 1.1;
+}
+
+.r2:hover > h1 {
+  opacity: 1;
+  transform: translateX(-40%);
+  filter: blur(0px);
+}
+.r2:hover > h4 {
+  opacity: 1;
+  transform: translate(-40%, 170%);
+  filter: blur(0px);
+}
+
+.r2 > img:hover,
+.teamBox > img:hover,
+.double > #g1:hover,
+.double > #g2:hover {
+  filter: blur(0px);
+}
+
+/* <-------------------------> */
+
+.teamBox:hover > h1 {
+  opacity: 1;
+  transform: translateX(-60%);
+  filter: blur(0px);
+}
+.teamBox:hover > h4 {
+  opacity: 1;
+  transform: translate(-60%, 170%);
+  filter: blur(0px);
+}
+.r1:hover {
+  box-shadow: 1px 1px 24px 4px #0088ff;
+}
+.r2:hover {
+  box-shadow: 1px 1px 24px 4px #ff0000;
+}
+.r3:hover {
+  box-shadow: 1px 1px 24px 4px rgb(57, 255, 143);
+}
+.r4:hover {
+  box-shadow: 1px 1px 24px 4px rgb(255, 174, 0);
+}
+
+.teamImage {
+  height: 100%;
+  width: 40%;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
 /* smaller screens */
 @media screen and (max-width: 750px) {
   .header {
@@ -1003,5 +1287,11 @@ a:hover::after {
     height: 150%;
     width: 70%;
     margin-bottom: 24px;
+  }
+
+  .teamPage {
+    /* one per row */
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(10, 250px);
   }
 }

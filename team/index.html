@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
+    <title>The Team | alchemy | IEDC CEAL</title>
+</head>
+
+<body style="animation: none;">
+    <header class="header">
+        <img src="/assets/alchemy.png" id="headerIMG">
+
+        <h1>Meet The Team</h1>
+
+
+        <div id="openNav">
+            <span class="material-symbols-sharp">
+                menu
+            </span>
+        </div>
+        <div class="nav" id="navi">
+            <a href="/">
+                <p>Home</p>
+            </a>
+
+
+        </div>
+    </header>
+
+    <div class="teamPage" style="width: 80vw;top: 10vh;">
+
+        <!-- make 11 boxes to put inside grid -->
+        <div class="teamBox r1">
+
+            <h1>Joash S</h1>
+            <h4>Chief Executive Officer (CEO)</h4>
+
+            <img style="width: auto;height: 100%;" src="/assets/team/JoashDaBoss.png">
+
+        </div>
+        <div class="r1 teamBox ">
+            <h1>Akhila S Kumar</h1>
+            <h4>Women Entrepreneurship Lead</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/Akhila.png">
+        </div>
+        <div class="teamBox r1">
+
+            <h1>Roshan Syed</h1>
+            <h4>Chief Operating Officer (COO)</h4>
+
+            <img style="width: auto;height: 100%;" src="/assets/team/Roshs.png">
+        </div>
+
+        <div class="r2">
+            <h1>Ragini</h1>
+            <h4>Chief Financial Officer (CFO)</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/Ragini.png">
+        </div>
+
+        <div class="r2">
+            <h1>Sumayya R</h1>
+            <h4>Chief Marketing Officer (CMO)</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/sumayyaR.png">
+        </div>
+        <div class="r2">
+            <h1>Anu Thampi AS</h1>
+            <h4>Chief Technology Officer (CTO)</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/Thempi.png">
+        </div>
+        <div class=" double" onmouseleave="g1Leave()" onmouseover="commonLeave">
+            <img style="width: auto;height: 100%;" id="g1" onmouseenter="g1Enter()" onmouseleave="commonLeave()"
+                src="/assets/team/thulasiAnnen.png">
+            <img style="width: auto;height: 100%;" id="g2" onmouseenter="g2Enter()" onmouseleave="commonLeave()"
+                src="/assets/team/Settu.png">
+
+            <h1 id="aswin">Aswin Thulasi R</h1>
+            <h4>Chief Creative Officer (CCO)</h4>
+
+            <h2 id="settu">Gokul SP</h2>
+
+
+        </div>
+        <div class="r3 teamBox ">
+            <h1>Nandhana S B</h1>
+            <h4>Chief Project Officer (CPO)</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/Esbee.png">
+        </div>
+        <div class="r3 teamBox ">
+            <h1>Govind S R</h1>
+            <h4>Chief Innovations Officer (CIO)</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/TheGoat.png">
+        </div>
+
+        <div class="r3 r2">
+            <h1>Vishnu Mohan S
+            </h1>
+            <h4>Community Lead</h4>
+            <img style="width: auto;height: 100%;" src="/assets/team/VM1.png">
+        </div>
+    </div>
+
+
+
+    <script>
+        var aswin = document.getElementById("aswin")
+        var settu = document.getElementById("settu")
+        function g1Enter(hovered) {
+            settu.style.filter = 'blur(3px)'
+            aswin.style.filter = 'blur(0px)'
+        }
+        function g1Leave() {
+            settu.style.filter = 'blur(3px)'
+            aswin.style.filter = 'blur(3px)'
+
+        }
+        function g2Enter() {
+            settu.style.filter = 'blur(0px)'
+            aswin.style.filter = 'blur(3px)'
+        }
+        function commonLeave() {
+            settu.style.filter = 'blur(0px)'
+            aswin.style.filter = 'blur(0px)'
+        }
+    </script>
+    <script src="/app.js"></script>
+</body>
+
+</html>
