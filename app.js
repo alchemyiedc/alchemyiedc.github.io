@@ -7,11 +7,6 @@ else {
     }
 }
 
-if (location.href.includes('#')) {
-    location.href = "/"
-    // location.reload()
-}
-
 
 
 window.onscroll = function () { myFunction() };
@@ -62,7 +57,6 @@ window.onresize = function () {
 
     }
 }
-
 
 
 

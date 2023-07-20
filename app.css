@@ -334,7 +334,7 @@ footer > div > :nth-child(3) {
   height: 79%;
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 24px;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
@@ -355,12 +355,6 @@ footer > div > :nth-child(3) {
   /* box-shadow: 2px 2px 3px 2px #ffffff73, -4px 9px 7px 6px #ffffff inset; */
   transition: 400ms;
   cursor: pointer;
-}
-
-.tile:hover {
-  scale: 0.9;
-
-  perspective: 244px;
 }
 
 .tile > img {
@@ -654,7 +648,12 @@ a:hover::after {
   height: 30px;
   transform: translateY(-50%) translateX(0%);
 }
-
+.link {
+  transition: 200ms;
+}
+.link:hover {
+  color: #ff5cf4;
+}
 ::-webkit-scrollbar {
   width: 4px;
   height: 0px;
@@ -999,14 +998,14 @@ a:hover::after {
   transition: 400ms;
 }
 
-.double > #g1 {
+.double > #Aswin {
   position: absolute;
   z-index: 7;
   left: 50%;
   transform: translateX(-80%);
   transition: 400ms;
 }
-.double > #g2 {
+.double > #Gokul {
   position: absolute;
   z-index: 4;
   left: 50%;
@@ -1051,55 +1050,65 @@ a:hover::after {
   z-index: 5;
 }
 
-.double:hover {
+.double:hover,
+.doubleFocus {
   box-shadow: 0px 0px 20px 0px rgb(57, 255, 143);
 }
-.double:hover > h1 {
+.double:hover > h1,
+.doubleFocus > h1 {
   opacity: 1;
   transform: translateX(-50%) translateY(-54%);
   filter: blur(0px);
 }
-.double:hover > h4 {
+.double:hover > h4,
+.doubleFocus > h4 {
   opacity: 1;
   transform: translate(-50%, 10%);
   filter: blur(0px);
   scale: 1;
 }
-.double:hover > h2 {
+.double:hover > h2,
+.doubleFocus > h2 {
   opacity: 1;
   transform: translateX(-60%) translateY(80%);
   filter: blur(0px);
 }
 
 /* <------------------------> */
-.r2:hover > img {
+.r2:hover > img,
+.r2Focus > img {
   transform: translateX(-102%);
   filter: blur(3px);
   scale: 1.1;
 }
 
-.teamBox:hover > img {
+.teamBox:hover > img,
+.teamBoxFocus > img {
   transform: translateX(15%);
   filter: blur(3px);
   scale: 1.1;
 }
-.double:hover > #g1 {
+.double:hover > #Aswin,
+.doubleFocus > #Aswin {
   transform: translateX(-102%);
   filter: blur(3px);
   scale: 1.1;
 }
-.double:hover > #g2 {
+.double:hover > #Gokul,
+.doubleFocus > #Gokul {
   transform: translateX(10%) translateY(20%);
   filter: blur(3px);
   scale: 1.1;
 }
 
-.r2:hover > h1 {
+.r2:hover > h1,
+.r2Focus > h1 {
   opacity: 1;
   transform: translateX(-40%);
   filter: blur(0px);
 }
-.r2:hover > h4 {
+.r2:hover > h4,
+.r2Focus > h4 {
   opacity: 1;
   transform: translate(-40%, 170%);
   filter: blur(0px);
@@ -1107,33 +1116,45 @@ a:hover::after {
 
 .r2 > img:hover,
 .teamBox > img:hover,
-.double > #g1:hover,
-.double > #g2:hover {
+.double > #Aswin:hover,
+.double > #Gokul:hover,
+.double > #Gokul:focus,
+.double > #Aswin:focus {
+  filter: blur(0px);
+}
+
+.imgUnblur {
   filter: blur(0px);
 }
 
 /* <-------------------------> */
 
-.teamBox:hover > h1 {
+.teamBox:hover > h1,
+.teamBoxFocus > h1 {
   opacity: 1;
   transform: translateX(-60%);
   filter: blur(0px);
 }
-.teamBox:hover > h4 {
+.teamBox:hover > h4,
+.teamBoxFocus > h4 {
   opacity: 1;
   transform: translate(-60%, 170%);
   filter: blur(0px);
 }
-.r1:hover {
+.r1:hover,
+.r1Focus {
   box-shadow: 1px 1px 24px 4px #0088ff;
 }
-.r2:hover {
+.r2:hover,
+.r2Focus {
   box-shadow: 1px 1px 24px 4px #ff0000;
 }
-.r3:hover {
+.r3:hover,
+.r3Focus {
   box-shadow: 1px 1px 24px 4px rgb(57, 255, 143);
 }
-.r4:hover {
+.r4:hover,
+.r4Focus {
   box-shadow: 1px 1px 24px 4px rgb(255, 174, 0);
 }
 

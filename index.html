@@ -152,33 +152,13 @@
         </h1>
         <div class="tileHolder">
 
-            <div class="tile" onclick="location.href='/events/'">
+            <div class="tile" onclick="location.href='/events/perfectPixel'">
                 <img src="/assets/posters/PerfectPixelPoster.jpg" />
             </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
+            <div class="tile" onclick="location.href='/events/chandrayaanIII'">
+                <img src="/assets/posters/Chandrayan3mn.png" />
             </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
-            <div class="tile">
-                <img src="/assets/posters/PerfectPixelPoster.jpg" />
-            </div>
+
         </div>
 
     </div>
@@ -259,6 +239,58 @@
 
     </footer>
 
+    <script>
+
+
+        tileHolder = document.getElementsByClassName("tileHolder")[0];
+
+        tileHolderChildren = tileHolder.children;
+
+        function mickey() {
+            for (let i = 0; i < tileHolderChildren.length; i++) {
+                if (tileHolderChildren[i].id != "tileHover") {
+                    tileHolderChildren[i].style.filter = "blur(3px) saturate(0%)";
+                    tileHolderChildren[i].style.opacity = "0.25";
+                }
+                else {
+                    tileHolderChildren[i].style.scale = "1.1"
+
+
+                }
+            }
+        }
+        function minney() {
+            for (let i = 0; i < tileHolderChildren.length; i++) {
+                tileHolderChildren[i].style.filter = "blur(0px) saturate(100%)";
+                tileHolderChildren[i].style.opacity = "1";
+                tileHolderChildren[i].style.scale = "1"
+
+
+
+            }
+        }
+
+        for (let i = 0; i < tileHolderChildren.length; i++) {
+            tileHolderChildren[i].addEventListener("mouseover", function () {
+                tileHolderChildren[i].setAttribute("id", "tileHover")
+                mickey();
+            })
+            tileHolderChildren[i].addEventListener("mouseout", function () {
+                tileHolderChildren[i].removeAttribute("id", "")
+                minney();
+            }
+            )
+        }
+
+        if (location.href.includes('#')) {
+            location.href = "/"
+            // location.reload()
+        }
+
+
+
+
+    </script>
     <script src="/app.js"></script>
 </body>
 
