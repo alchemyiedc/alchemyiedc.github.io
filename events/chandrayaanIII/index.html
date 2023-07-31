@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
-    <title>Perfect Pixel | alchemy | IEDC CEAL</title>
+    <title>Chandrayan-III Live Stream | alchemy | IEDC CEAL</title>
 
     <style>
         #tinosHeading {
@@ -22,7 +22,7 @@
 
         @media screen and (max-width: 750px) {
             #tinosHeading {
-                font-size: 38px;
+                font-size: 33px;
             }
         }
     </style>
@@ -40,7 +40,8 @@
     ">
 
     <header class="header">
-        <img src="/assets/alchemy.png" id="headerIMG">
+        <img src="/assets/alchemy.png" id="headerIMG" onclick="location.href = '/'">
+
 
 
         <div id="openNav">
@@ -58,7 +59,7 @@
     </header>
 
 
-    <div class="main align-middle color-white">
+    <div class="main align-middle color-white eventPage">
         <h1 style="font-family: 'Tinos', serif;margin-bottom: 0px;opacity:0;animation: mainAnim 1s forwards 0.4s"
             id="tinosHeading">
             CHANDRAYAAN - III
@@ -72,7 +73,8 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    opacity:0;animation: mainAnim 1s forwards 0.6s">14/07/2023 &#x2022; A New Chapter in India's Space Journey
+    opacity:0;animation: mainAnim 1s forwards 0.6s;text-align: center;">14/07/2023 &#x2022; A New Chapter in India's
+            Space Journey
             <span style="color: red;"> Live Screening <span style="color: darkgray;">- ended</span>
             </span>
         </h3>
@@ -98,11 +100,41 @@
             about the future of space travel.
 
         </p>
+        <div class="OpenGallery" onclick="openGallery()">
+            <span class="material-symbols-sharp" style="color: #01ffaa; ">
+                expand_more
+            </span>
+            Open Gallery
+        </div>
+    </div>
+
+    <div class="gallery" id="galleryWindow" onclick="closeGallery()">
+        We are under construction
     </div>
 
     <script src="/app.js"></script>
 
+    <script>
 
+        function openGallery() {
+            document.getElementById('galleryWindow').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('galleryWindow').style.height = '70vh';
+                document.getElementById('galleryWindow').style.width = '90vw';
+                document.getElementById('galleryWindow').style.top = '50%';
+
+            }, 100);
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryWindow').style.height = '0vh';
+            document.getElementById('galleryWindow').style.width = '0vw';
+            document.getElementById('galleryWindow').style.top = '70%';
+            setTimeout(() => {
+                document.getElementById('galleryWindow').style.display = 'none';
+            }, 400);
+        }
+    </script>
 </body>
 
 </html>

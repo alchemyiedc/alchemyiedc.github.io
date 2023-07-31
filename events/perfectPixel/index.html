@@ -27,7 +27,8 @@
     animation: fadeIn 1s forwards 0s;">
 
     <header class="header">
-        <img src="/assets/alchemy.png" id="headerIMG">
+        <img src="/assets/alchemy.png" id="headerIMG" onclick="location.href = '/'">
+
 
 
         <div id="openNav">
@@ -51,57 +52,89 @@
             Perfect Pixel
         </h1>
 
-        <div class="eventBox">
-            <div></div>
+        <hr style="    width: 90vw;
+    height: 4px;
+    border-radius: 2px;
+    border: none;
+    opacity: 0;
+    background: linear-gradient(45deg ,rgb(208 39 255),#4e2757,rgb(188 0 236));
+    animation: fadein 1s forwards 0.6s;">
+        <h3 style="    margin: 2px;
+                width: 90vw;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                opacity:0;animation: mainAnim 1s forwards 0.6s;text-align: center;">24 and 25th of June, 2023 &#x2022;
+            Master the Concept
+            of Designing
+            <span style="color: rgb(242, 0, 255);">In-Person Event&nbsp;<span style="color: darkgray;">- ended</span>
+            </span>
+        </h3>
+        <p style="width: 90vw;text-align: center; margin: 0px;opacity:0;animation: mainAnim 1s forwards 0.8s">
+            <br>
+            conducted by <b style="cursor: pointer;" class="link"
+                onclick="location.href='https://www.linkedin.com/in/govind-ramababu-b0a525190/'">Govind
+                Ramababu</b> (Former CEO of IEDC CEAL and Design Lead at Google DSC CEAL)
+        </p>
 
-            <div>
-                24-25 June 2023
-                <br>
-                College of Engineering,Attingal
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style="width: 90vw;text-align: center; margin: 0px;opacity:0;animation: mainAnim 1s forwards 0.8s">
+            IEDC College of Engineering Attingal proudly presents Luminary, an enlightening series dedicated to
+            immersive
+            hands-on
+            experiences in various disciplines, conducted by seasoned professionals.
+
+            Embark on an extraordinary journey with the inaugural edition, Perfect Pixel , where we delve into Designing
+            using Figma
+            through an exhilarating two-day live workshop. Immerse yourself in a captivating blend of interactive
+            learning and
+            project designing challenges, tailored to ignite your creative spark.
+        </p>
 
 
-                <div class="chipletIsle" style="justify-content: center;">
-                    <div class="chiplet">
-                        <span class="material-symbols-sharp">
-                            event
-                        </span>
-                        <p>Event</p>
-                    </div>
-                    <div class="chiplet" style="width: 60px;">
-                        <span class="material-symbols-sharp">
-                            palette
-                        </span>
-                        <p>Workshop</p>
-                    </div>
-                    <div class="chiplet">
-                        <span class="material-symbols-sharp">
-                            wifi_off
-                        </span>
-                        <p>Offline</p>
-                    </div>
-                </div>
-                <p style="width: 80%;text-align: center;
-                            margin-top:22px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque laudantium, totam rem
-                    aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim
-                    ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui
-                    ratione</p>
 
 
-            </div>
-
+        <div class="OpenGallery" onclick="openGallery()">
+            <span class="material-symbols-sharp" style="color: #01ffaa; ">
+                expand_more
+            </span>
+            Open Gallery
         </div>
 
 
-
+    </div>
+    <div class="gallery" id="galleryWindow" onclick="closeGallery()">
+        We are under construction
     </div>
 
     <script src="/app.js"></script>
 
+    <script>
+
+        function openGallery() {
+            document.getElementById('galleryWindow').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('galleryWindow').style.height = '70vh';
+                document.getElementById('galleryWindow').style.width = '90vw';
+                document.getElementById('galleryWindow').style.top = '50%';
+
+            }, 100);
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryWindow').style.height = '0vh';
+            document.getElementById('galleryWindow').style.width = '0vw';
+            document.getElementById('galleryWindow').style.top = '70%';
+            setTimeout(() => {
+                document.getElementById('galleryWindow').style.display = 'none';
+            }, 400);
+        }
+    </script>
 
 </body>
 
