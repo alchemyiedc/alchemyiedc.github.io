@@ -26,6 +26,48 @@
   left: 0;
 }
 
+.OpenGallery {
+  opacity: 0;
+  animation: mainAnim 1s forwards 1.5s;
+  margin: 12px 0px;
+  width: 150px;
+  background: white;
+  color: black;
+  font-weight: 800;
+  border-radius: 25px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1;
+  cursor: pointer;
+  transition: 200ms;
+}
+.OpenGallery:hover {
+  background: #000000;
+  color: white;
+  scale: 1.5;
+}
+
+.gallery {
+  position: absolute;
+  width: 0vw;
+  height: 0vh;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: azure;
+  color: grey;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: 400ms;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
 .headerSticky {
   background: #0000007c;
 
@@ -186,6 +228,10 @@ html {
 .sponsors {
   width: 240px;
   height: 240px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .basic {
@@ -441,6 +487,7 @@ footer > div > :nth-child(3) {
   animation: slidert 1s forwards;
   transform: translateX(-120px);
   scale: 0.7;
+  cursor: pointer;
   opacity: 0;
 }
 @keyframes slidert {
@@ -1246,6 +1293,10 @@ a:hover::after {
     height: 50%;
     margin: 12px 0px 24px 0px;
   }
+  .eventPage {
+    align-content: flex-start;
+  }
+
   .alchemyHolder > img {
     width: 80%;
     height: auto;
