@@ -21,4 +21,4 @@ jobs:
 
     - name: Deploy to Raspberry Pi
       run: |
-        rsync -avz --delete /home/pi/alchemy pi@pi.local:/home/pi/alchemy-docker/alchemy/
+        rsync -avz --delete -vv /home/pi/alchemy-docker/alchemy/ pi@pi.local:~/path/on/rpi/
