@@ -1,0 +1,28 @@
+name: Cloudflare WARP Setup
+
+on: [push]
+
+jobs:
+  setup-cloudflare-warp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Cloudflare WARP
+        uses: Boostport/setup-cloudflare-warp@v1
+        with:
+          organization: your-organization
+          auth_client_id: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_ID }}
+          auth_client_secret: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_SECRET }}
+
+      - name: Test access to secured resource
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.RPI_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Deploy to Raspberry Pi
+        run: |
+          rsync -avz --delete -vv ~/pi/alchemy pi@192.168.29.175:~/pi/alchemy-docker/alchemy
