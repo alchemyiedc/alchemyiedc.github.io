@@ -109,32 +109,49 @@
 
     </div>
     <div class="gallery" id="galleryWindow" onclick="closeGallery()">
-        We are under construction
+        <iframe style="border: none;padding: 0px;margin: 0px;width: 100%;height: 100%;"
+            src="/pages/gallery/#Perfect Pixel&1&jpg">
+        </iframe>
+    </div>
+    <div class="photoCarousel" id="phoato">
+        <div class="carouselHead">
+            <div class="carouselTitle">
+                <h1>Perfect Pixel</h1>
+                <h3>Gallery</h3>
+            </div>
+            <div class="closeCarousel" onclick="Carousel()">
+                <span class="material-symbols-sharp">
+                    close
+                </span>
+            </div>
+        </div>
+
+        <div class="carouselImage" id="carouselImage">
+
+        </div>
+
+        <div class="imageThumbsContainer">
+            <div class="leftArrow" onclick="prevImage()">
+                <span class="material-symbols-sharp">
+                    chevron_left
+                </span>
+            </div>
+            <div class="imageCounter">
+                <p id="imageCounter">1/1</p>
+            </div>
+            <div class="rightArrow" onclick="nextImage()">
+                <span class="material-symbols-sharp">
+                    chevron_right
+                </span>
+            </div>
+
+        </div>
     </div>
 
-    <script src="/app.js"></script>
-
-    <script>
-
-        function openGallery() {
-            document.getElementById('galleryWindow').style.display = 'flex';
-            setTimeout(() => {
-                document.getElementById('galleryWindow').style.height = '70vh';
-                document.getElementById('galleryWindow').style.width = '90vw';
-                document.getElementById('galleryWindow').style.top = '50%';
-
-            }, 100);
-        }
-
-        function closeGallery() {
-            document.getElementById('galleryWindow').style.height = '0vh';
-            document.getElementById('galleryWindow').style.width = '0vw';
-            document.getElementById('galleryWindow').style.top = '70%';
-            setTimeout(() => {
-                document.getElementById('galleryWindow').style.display = 'none';
-            }, 400);
-        }
+    <script src=" /app.js">
     </script>
+
+    <script src="/SuperGallery.js"></script>
 
 </body>
 

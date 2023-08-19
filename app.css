@@ -50,16 +50,18 @@
 }
 
 .gallery {
-  position: absolute;
-  width: 0vw;
-  height: 0vh;
+  position: fixed;
+  width: 30vw;
+  height: 20vh;
+  opacity: 0%;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: azure;
+  background: #ffffff8f;
   color: grey;
   border-radius: 10px;
   display: none;
+  backdrop-filter: blur(12px);
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
@@ -68,6 +70,192 @@
   align-items: center;
   justify-content: center;
 }
+.galleryTitle {
+  position: absolute;
+  left: 24px;
+  font-size: 22px;
+  width: 100vh;
+  height: 4vh;
+  /* overflow: scroll; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#gallerya {
+  margin: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+#gallerya > img {
+  transition: 200ms;
+}
+
+#gallerya > img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.photoCarousel {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 52;
+  background: #050505a3;
+  opacity: 0%;
+  transition: 400ms;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  user-select: none;
+}
+.carouselHead {
+  width: 100%;
+  display: flex;
+  height: 8vh;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(4px);
+}
+.carouselTitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  margin-left: 12px;
+}
+.carouselTitle > h1,
+.carouselTitle > h3 {
+  margin: 0px;
+}
+.carouselTitle > h3 {
+  /* font-size: 16px; */
+  color: grey;
+}
+.carouselTitle > h1 {
+  width: 100vh;
+  height: 4vh;
+  font-size: 22px;
+  /* overflow: scroll; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.closeCarousel {
+  margin-right: 24px;
+  font-size: 22px;
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  display: flex;
+  background: #ac000056;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 1px rgba(139, 0, 0, 0.355) solid;
+  transition: 200ms;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.closeCarousel:hover {
+  background: #7d0000;
+  border: 1px rgb(255, 0, 0) solid;
+  scale: 1.06;
+}
+.carouselImage {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  background-position: center;
+
+  left: 50%;
+  background: rgb(71, 71, 71);
+  transform: translate(-50%, -50%);
+  background-size: contain;
+}
+.carouselImage > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 200ms;
+}
+.imageThumbsContainer {
+  display: flex;
+  bottom: 30px;
+  align-content: center;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+.leftArrow {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  background: #2626267a;
+  cursor: pointer;
+  border: 1px rgba(128, 128, 128, 0.355) solid;
+  transition: 200ms;
+}
+.rightArrow {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  background: #2626267a;
+  cursor: pointer;
+  border: 1px rgba(128, 128, 128, 0.355) solid;
+  transition: 200ms;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background: #262626;
+  border: 1px rgba(128, 128, 128, 0.555) solid;
+  scale: 1.06;
+}
+
+#closeSpan {
+  margin-right: 24px;
+  font-size: 22px;
+  color: rgba(255, 0, 0, 0.353);
+  transition: 200ms;
+}
+
+#closeSpan:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+
 .headerSticky {
   background: #0000007c;
 
@@ -1239,6 +1427,13 @@ a:hover::after {
     align-items: center;
     justify-content: center;
   }
+
+  #gallerya {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin: 6px;
+  }
+
   #openNav:hover {
     background: #1818181e;
     color: #9b0eff;
@@ -1324,6 +1519,29 @@ a:hover::after {
     mix-blend-mode: difference;
     scale: 0.87;
     height: 3vh;
+  }
+  .gallery {
+    z-index: 40;
+    border-radius: 0px;
+  }
+  .galleryTitle {
+    position: absolute;
+    left: 24px;
+    font-size: 22px;
+    width: 25vh;
+    height: 4vh;
+    /* overflow: scroll; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .carouselTitle > h1 {
+    width: 25vh;
+    height: 4vh;
+    /* overflow: scroll; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .main {
     height: 140vh;

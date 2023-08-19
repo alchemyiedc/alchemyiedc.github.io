@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
+    <title>Gallery App</title>
+
+</head>
+
+<body style="animation: none;background: none;">
+    <div style="    width: 100%;
+    height: 12vh;
+    display: flex;
+    background-color: white;
+    border-radius: 4px 4px 0px 0px;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;">
+
+        <p id="title" class="galleryTitle"></p>
+        <span id="closeSpan" onclick="triggerClose()">
+            close
+        </span>
+    </div>
+    <div id="gallerya">
+
+
+    </div>
+
+
+
+    <script>
+
+        var parent = window.parent
+        function triggerClose() {
+            parent.closeGallery();
+        }
+
+        var loc = window.location.href;
+        var loc = loc.split('/');
+        console.log(loc[loc.length - 1]);
+        var event = (loc[loc.length - 1]).split('&')[0].replace('#', '');
+        var picsN = (loc[loc.length - 1]).split('&')[1];
+        picsN++;
+        var fileType = (loc[loc.length - 1]).split('&')[2];
+        console.log(event, picsN, fileType);
+        var pics = [];
+
+        var title = event.replace(/_/g, ' ');
+        // url decode
+        title = decodeURIComponent(title);
+
+        // capitalize first letter
+        title = title.charAt(0).toUpperCase() + title.slice(1);
+        document.getElementById('title').innerHTML = title;
+
+
+        for (let i = 1; i < picsN; i++) {
+            pics.push('/assets/events/' + event + '/' + i + '.' + fileType);
+        }
+        console.log(pics);
+        for (let i = 0; i < pics.length; i++) {
+            document.getElementById('gallerya').innerHTML += '<img src="' + pics[i] + '" style="width: 100%;height: auto;" onclick="setTarget(' + i + ')">';
+        }
+        messageBlock = {
+            event: "loaded",
+            data: pics
+        }
+        picsJson = JSON.stringify(messageBlock);
+        picsEncrypt = btoa(picsJson);
+        parent.postMessage(picsEncrypt, '*');
+
+        function setTarget(n) {
+            messageBlock = {
+                event: "target",
+                data: n
+            }
+            picsJson = JSON.stringify(messageBlock);
+            picsEncrypt = btoa(picsJson);
+            parent.postMessage(picsEncrypt, '*');
+        }
+
+    </script>
+</body>
+
+</html>
