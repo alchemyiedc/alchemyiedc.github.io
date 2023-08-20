@@ -55,7 +55,7 @@ function closeGallery() {
 
 _isCarouselOpen = false;
 _imgIndex = 0;
-
+var pics = []
 window.addEventListener("message", function (event) {
     picsDecrypt = atob(event.data);
     picsJson = JSON.parse(picsDecrypt);
@@ -94,7 +94,7 @@ function imgLoader(img) {
         document.getElementById('carouselImage').style.height = newHeight + 'px';
         document.getElementById('carouselImage').style.width = targetWidth + 'px';
     };
-    document.getElementById('imageCounter').innerHTML = '1/' + pics.length;
+    document.getElementById('imageCounter').innerHTML = (_imgIndex + 1) + '/' + pics.length;
 }
 
 function Carousel() {
