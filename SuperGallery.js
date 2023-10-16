@@ -23,12 +23,19 @@ const styles2 = [
 console.log("%cHello There!!!", styles);
 console.log("%cthis Website uses SuperGallery from %cHVH", styles, styles2);
 
+document.getElementById("phoato").addEventListener("click", function (e) {
+   if(e.target.className == "photoCarousel"){
+    Carousel();
+   }
+});
+
 function openGallery() {
     document.getElementById('galleryWindow').style.display = 'flex';
     setTimeout(() => {
         if (window.innerWidth > 750) {
             document.getElementById('galleryWindow').style.height = '90vh';
-            document.getElementById('galleryWindow').style.width = '90vw';
+            document.getElementById('galleryWindow').style.width = '95vw';
+            document.getElementById('galleryWindow').style.zIndex = '51';
             document.getElementById('galleryWindow').style.top = '50%';
             document.getElementById('galleryWindow').style.opacity = '100%';
         }
@@ -56,27 +63,7 @@ function closeGallery() {
 _isCarouselOpen = false;
 _imgIndex = 0;
 var pics = []
-window.addEventListener("message", function (event) {
-    picsDecrypt = atob(event.data);
-    picsJson = JSON.parse(picsDecrypt);
-    if (picsJson.event == 'loaded') {
-        pics = picsJson.data;
-        document.getElementById('carouselImage').style.background = 'url(' + pics[0] + ') no-repeat center center';
-        document.getElementById('carouselImage').style.backgroundSize = 'contain';
-        var img = new Image();
-        img.src = pics[0];
-        imgLoader(img);
-    }
-    else if (picsJson.event == "target") {
-        _imgIndex = picsJson.data;
-        document.getElementById('carouselImage').style.background = 'url(' + pics[_imgIndex] + ') no-repeat center center';
-        document.getElementById('carouselImage').style.backgroundSize = 'contain';
-        var img = new Image();
-        img.src = pics[_imgIndex];
-        imgLoader(img);
-        Carousel();
-    }
-});
+
 
 
 carouseL = document.getElementById('phoato');
@@ -85,7 +72,7 @@ function imgLoader(img) {
     img.onload = function () {
         var originalWidth = img.naturalWidth;
         var originalHeight = img.naturalHeight;
-        var targetWidth = 400;
+        var targetWidth = 600;
         if (window.innerWidth < 750) {
             targetWidth = window.innerWidth - 120;
         }
@@ -136,5 +123,28 @@ function prevImage() {
         var img = new Image();
         img.src = pics[_imgIndex];
         imgLoader(img);
+    }
+}
+
+
+
+function trigger(action){
+    picsJson = JSON.parse(atob(localStorage.getItem('msg')));
+    if (action == 'loaded') {
+        pics = picsJson.data;
+        document.getElementById('carouselImage').style.background = 'url(' + pics[0] + ') no-repeat center center';
+        document.getElementById('carouselImage').style.backgroundSize = 'contain';
+        var img = new Image();
+        img.src = pics[0];
+        imgLoader(img);
+    }
+    else if (action == "target") {
+        _imgIndex = picsJson.data;
+        document.getElementById('carouselImage').style.background = 'url(' + pics[_imgIndex] + ') no-repeat center center';
+        document.getElementById('carouselImage').style.backgroundSize = 'contain';
+        var img = new Image();
+        img.src = pics[_imgIndex];
+        imgLoader(img);
+        Carousel();
     }
 }

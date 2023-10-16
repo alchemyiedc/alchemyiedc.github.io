@@ -49,7 +49,7 @@
 
         var loc = window.location.href;
         var loc = loc.split('/');
-        console.log(loc[loc.length - 1]);
+        // console.log(loc[loc.length - 1]);
         var event = (loc[loc.length - 1]).split('&')[0].replace('#', '');
         var picsN = (loc[loc.length - 1]).split('&')[1];
         picsN++;
@@ -69,18 +69,23 @@
         for (let i = 1; i < picsN; i++) {
             pics.push('/assets/events/' + event + '/' + i + '.' + fileType);
         }
-        console.log(pics);
-        for (let i = 0; i < pics.length; i++) {
+        // console.log(pics);
+
+            for (let i = 0; i < pics.length; i++) {
             document.getElementById('gallerya').innerHTML += '<img src="' + pics[i] + '" style="width: 100%;height: auto;" onclick="setTarget(' + i + ')">';
         }
+
+    
         messageBlock = {
             event: "loaded",
             data: pics
         }
         picsJson = JSON.stringify(messageBlock);
         picsEncrypt = btoa(picsJson);
-        parent.postMessage(picsEncrypt, '*');
 
+
+        localStorage.setItem('msg', picsEncrypt);
+        window.parent.trigger("loaded")
         function setTarget(n) {
             messageBlock = {
                 event: "target",
@@ -88,7 +93,9 @@
             }
             picsJson = JSON.stringify(messageBlock);
             picsEncrypt = btoa(picsJson);
-            parent.postMessage(picsEncrypt, '*');
+            localStorage.setItem('msg', picsEncrypt);
+            window.parent.trigger("target")
+            // parent.postMessage(picsEncrypt, '*');
         }
 
     </script>
