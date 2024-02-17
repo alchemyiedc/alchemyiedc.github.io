@@ -1,4 +1,4 @@
-name: Updating on PiCloud
+name: Connection Check and Logging
 on: [push]
 jobs:
   check_connection:
@@ -32,9 +32,5 @@ jobs:
           cd /home/pi/docker-alchemy/alchemy
           git fetch origin
           git reset --hard origin/main
-          - name: Display Success
-            if: success() 
-            run: echo "✔️ Workflow Completed - Done!" 
-          
-
-
+          if: success() 
+          run: echo "✔️ Workflow Completed - Done!" 
