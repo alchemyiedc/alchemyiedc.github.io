@@ -1,4 +1,4 @@
-name: Connection Check and Logging
+name: Updating on PiCloud
 on: [push]
 jobs:
   check_connection:
