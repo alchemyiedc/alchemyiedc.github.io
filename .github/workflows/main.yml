@@ -27,9 +27,9 @@ jobs:
           timestamp=$(date +"%Y-%m-%d %T") 
           echo "Workflow executed on runner at $timestamp" >> /root/actions-runner/hello.log
           cat /root/actions-runner/hello.log
-      - name: Alchemy Sync 
+      - name: Alchemy Sync 
         run: |
-          cd /home/pi/docker-alchemy/alchemy
-          git fetch origin
-          git reset --hard origin/main
-          run: echo "✔️ Workflow Completed - Done!" 
+         cd /home/pi/docker-alchemy/alchemy
+         git fetch origin
+         git reset --hard origin/main
+         run: echo "✔️ Workflow Completed - Done!" 
