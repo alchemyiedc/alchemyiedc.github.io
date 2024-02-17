@@ -32,5 +32,4 @@ jobs:
           cd /home/pi/docker-alchemy/alchemy
           git fetch origin
           git reset --hard origin/main
-          if: success() 
           run: echo "✔️ Workflow Completed - Done!" 
