@@ -13,15 +13,7 @@ jobs:
     steps:
       - name: Debug Runner Information
         run: |
-          uname -a
-          df -h
-          free -h
-          cat /proc/cpuinfo
-          cat /proc/meminfo
-          ip addr
-          ip route
-          ping github.com -c 4
-
+         ping github.com -c 4
       - name: Log success on the runner 
         run: |
           timestamp=$(date +"%Y-%m-%d %T") 
@@ -32,4 +24,4 @@ jobs:
          cd /home/pi/docker-alchemy/alchemy
          git fetch origin
          git reset --hard origin/main
-         run: echo "✔️ Workflow Completed - Done!" 
+         echo "✔️ Workflow Completed - Done!" 
