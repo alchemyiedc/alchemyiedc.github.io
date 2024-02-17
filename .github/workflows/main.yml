@@ -1,28 +1,40 @@
-name: Cloudflare WARP Setup
-
+name: Connection Check and Logging
 on: [push]
-
 jobs:
-  setup-cloudflare-warp:
-    runs-on: ubuntu-latest
-
+  check_connection:
+    runs-on: [self-hosted, linux, ARM64]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Cloudflare WARP
-        uses: Boostport/setup-cloudflare-warp@v1
-        with:
-          organization: your-organization
-          auth_client_id: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_ID }}
-          auth_client_secret: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_SECRET }}
-
-      - name: Test access to secured resource
+      - name: Check Connection
+        run: echo "Connection successful"
+  
+  logging:
+    needs: check_connection
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+      - name: Debug Runner Information
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.RPI_SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          uname -a
+          df -h
+          free -h
+          cat /proc/cpuinfo
+          cat /proc/meminfo
+          ip addr
+          ip route
+          ping github.com -c 4
 
-      - name: Deploy to Raspberry Pi
+      - name: Log success on the runner 
         run: |
-          rsync -avz --delete -vv ~/pi/alchemy pi@192.168.29.175:~/pi/alchemy-docker/alchemy
+          timestamp=$(date +"%Y-%m-%d %T") 
+          echo "Workflow executed on runner at $timestamp" >> /root/actions-runner/hello.log
+          cat /root/actions-runner/hello.log
+      - name: Alchemy Sync 
+        run: |
+          cd /home/pi/docker-alchemy/alchemy
+          git fetch origin
+          git reset --hard origin/main
+          - name: Display Success
+            if: success() 
+            run: echo "✔️ Workflow Completed - Done!" 
+          
+
+
