@@ -1,4 +1,4 @@
-name: Connection Check and Logging
+name: Build on PiCloud
 on: [push]
 jobs:
   check_connection:
@@ -14,11 +14,6 @@ jobs:
       - name: Debug Runner Information
         run: |
          ping github.com -c 4
-      - name: Log success on the runner 
-        run: |
-          timestamp=$(date +"%Y-%m-%d %T") 
-          echo "Workflow executed on runner at $timestamp" >> /root/actions-runner/hello.log
-          cat /root/actions-runner/hello.log
       - name: Alchemy Sync 
         run: |
          cd /home/pi/docker-alchemy/alchemy
