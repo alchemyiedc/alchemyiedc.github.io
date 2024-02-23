@@ -16,7 +16,7 @@ jobs:
          ping github.com -c 4
       - name: Alchemy Sync 
         run: |
-         cd /home/pi/docker-alchemy/alchemy
+         cd ${{ secrets.DOCKER_ALCHEMY_PATH }}
          git fetch origin
          git reset --hard origin/main
          echo "✔️ Workflow Completed - Done!" 
