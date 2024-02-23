@@ -1,4 +1,7 @@
-# alchemy website project | IEDC CEAL
+![workflow](https://github.com/IEDC-CEAL/alchemy/actions/workflows/main.yml/badge.svg)
+
+# Alchemy website project | IEDC CEAL
+
 
 ## Get Started
 
