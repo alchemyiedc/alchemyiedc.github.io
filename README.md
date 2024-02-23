@@ -1,4 +1,4 @@
-![workflow](https://github.com/IEDC-CEAL/alchemy/actions/workflows/main.yml/badge.svg)
+[![workflow](https://github.com/IEDC-CEAL/alchemy/actions/workflows/main.yml/badge.svg)](https://stats.govindsr.me)
 
 # Alchemy website project | IEDC CEAL
 
