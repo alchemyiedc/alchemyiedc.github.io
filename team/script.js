@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sectionMapping = {
         "Executive Committee": "executive-committee",
         "Executive Teams": "executive-teams",
-        "EDC & IIC": "edc-iic",
+        "IEDC & IIC": "edc-iic",
         "Impact Cafe™": "impact-cafe"
       };
 
