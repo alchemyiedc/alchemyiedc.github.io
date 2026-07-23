@@ -1,0 +1,122 @@
+{
+   "Executive Committee": {
+    "Student Lead": [
+      {
+        "name": "Nandana Nair",
+        "image": "members/Nandana Nair.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/nandananair26/",
+          "instagram": "https://www.instagram.com/n_h_l_n___m/",
+          "github": ""
+        }
+      },
+      {
+        "name": "Samvrtha Vichithran",
+        "image": "members/Samvrthavichithran.png",
+        "links": {
+          "linkedin": "",
+          "instagram": "",
+          "github": ""
+        }
+      }
+    ],
+    "Operations Lead": [
+      {
+        "name": "Muhammed Arshad K",
+        "image": "members/Muhammedarshad.png",
+        "links": {
+          "linkedin": "",
+          "instagram": "",
+          "github": ""
+        }
+      }
+    ],
+    "Technical Lead": [
+      {
+        "name": "Aswin A B",
+        "image": "members/Aswin A B.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sreedevss/",
+          "instagram": "https://www.instagram.com/_mt_yt_/",
+          "github": "https://github.com/MTCodes01/"
+        }
+      }
+    ],
+    "Marketing Lead": [
+      {
+        "name": "Nandana E",
+        "image": "members/Nandanae.png",
+        "links": { "linkedin": "https://www.linkedin.com/in/nandananair26/", "instagram": "https://www.instagram.com/__nandana_nair/", "github": "" }
+      }
+    ],
+    "Creative Lead": [
+      {
+        "name": "Naveen M",
+        "image": "members/Naveenm.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Women Innovation Lead": [
+      {
+        "name": "Vandana Ramesh",
+        "image": "members/Vandanaramesh.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Community Lead": [
+      {
+        "name": "Ananthan P S",
+        "image": "members/Ananthanps.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Finance Lead": [
+      {
+        "name": "Sofiya B",
+        "image": "members/Sofiyab.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Informations Lead": [
+      {
+        "name": "Hafis Mohammed K",
+        "image": "members/Hafismohammedk.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Media Lead": [
+      {
+        "name": "Harigovind P Nair",
+        "image": "members/Harigovindpnair.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/harigovind-p-nair-89a4992b8/",
+          "instagram": "https://www.instagram.com/_h._.gp/",
+          "github": "https://github.com/hari2629-p"
+        }
+      }
+    ],
+    "Documentation Lead": [
+      {
+        "name": "Aashray J Pramod",
+        "image": "members/Aashrayjpramod.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ],
+    "Event Manager": [
+      {
+        "name": "Pranav S",
+        "image": "members/Pranavs.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/ps2005/",
+          "instagram": "https://www.instagram.com/__pr.an.av_/",
+          "github": "https://github.com/pranavsachu"
+        }
+      },
+      {
+        "name": "Dhanush S",
+        "image": "members/Dhanushs.png",
+        "links": { "linkedin": "", "instagram": "", "github": "" }
+      }
+    ]
+  } 
+}
