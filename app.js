@@ -7,6 +7,27 @@ else {
     }
 }
 
+window.addEventListener('DOMContentLoaded', function () {
+    var pendingTarget = sessionStorage.getItem('alchemyScrollTarget');
+    var hashTarget = window.location.hash ? window.location.hash.slice(1) : '';
+    var targetId = pendingTarget || hashTarget;
+
+    if (!targetId) {
+        return;
+    }
+
+    sessionStorage.removeItem('alchemyScrollTarget');
+
+    var targetElement = document.getElementById(targetId);
+    if (!targetElement) {
+        return;
+    }
+
+    window.requestAnimationFrame(function () {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
 
 
 window.onscroll = function () { myFunction() };

@@ -4,35 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IEDC EXECOM 2025-'26</title>
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="../app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>IEDC EXECOM 2025-'26</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+      overscroll-behavior-y: none;
+    }
+
     body {
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      height: auto;
       font-family: 'Poppins', sans-serif;
       background: #000;
       color: #fff;
+      overflow-x: hidden;
+      animation: none;
     }
 
-    .logo-top {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 500;
+    main {
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 8vh;
     }
 
-    .logo-top img {
-      height: 40px;
-      width: auto;
-      filter: invert(1);
+    .team-shell {
+      padding-bottom: 48px;
     }
 
     section {
       background: #000;
       padding: 80px 60px 80px 60px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     section h2 {
@@ -171,38 +186,112 @@
 </head>
 
 <body>
-  <div class="logo-top">
-    <img src="logos/alchemy.png" alt="IEDC Alchemy Logo">
-  </div>
-
-  <section>
-    <h2>Executive Committee</h2>
-    <div class="cards-wrapper" id="executive-committee">
-      <!-- Content loaded dynamically from members.json -->
+  <header class="header">
+    <img src="/assets/alchemy.png" id="headerIMG" onclick="location.href = '/'" alt="alchemy logo">
+  
+    <div id="openNav">
+      <span class="material-symbols-sharp">menu</span>
     </div>
-  </section>
-
-  <section>
-    <h2>Executive Teams</h2>
-    <div class="cards-wrapper" id="executive-teams">
-      <!-- Content loaded dynamically from members.json -->
+    <div class="nav" id="navi">
+      <a href="../index.html">
+        <p>Home</p>
+      </a>
+      <a href="../index.html#about" onclick="sessionStorage.setItem('alchemyScrollTarget', 'about')">
+        <p>About</p>
+      </a>
+      <a href="../index.html#events" onclick="sessionStorage.setItem('alchemyScrollTarget', 'events')">
+        <p>Events</p>
+      </a>
+      <a href="./">
+        <p>Team</p>
+      </a>
+      <a href="../index.html#joinUs" onclick="sessionStorage.setItem('alchemyScrollTarget', 'joinUs')">
+        <p class="joinx">JOIN</p>
+      </a>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>IEDC & IIC</h2>
-    <div class="cards-wrapper" id="edc-iic">
-      <!-- Content loaded dynamically from members.json -->
-    </div>
-  </section>
+  <main class="team-shell">
+    <section>
+      <h2>Executive Committee</h2>
+      <div class="cards-wrapper" id="executive-committee">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
 
-  <section>
-    <h2>Impact Cafe™</h2>
-    <div class="cards-wrapper" id="impact-cafe">
-      <!-- Content loaded dynamically from members.json -->
-    </div>
-  </section>
+    <section>
+      <h2>Executive Teams</h2>
+      <div class="cards-wrapper" id="executive-teams">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
 
+    <section>
+      <h2>IEDC & IIC</h2>
+      <div class="cards-wrapper" id="edc-iic">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Impact Cafe™</h2>
+      <div class="cards-wrapper" id="impact-cafe">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="../app.js"></script>
+  <script>
+    (() => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+
+      const maxScrollY = () => Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      let targetScrollY = window.scrollY;
+      let animationFrameId = null;
+
+      const ease = 0.085;
+
+      const animateScroll = () => {
+        const delta = targetScrollY - window.scrollY;
+
+        if (Math.abs(delta) < 0.5) {
+          window.scrollTo(0, targetScrollY);
+          animationFrameId = null;
+          return;
+        }
+
+        window.scrollTo(0, window.scrollY + delta * ease);
+        animationFrameId = requestAnimationFrame(animateScroll);
+      };
+
+      window.addEventListener('wheel', (event) => {
+        if (event.ctrlKey) {
+          return;
+        }
+
+        event.preventDefault();
+        targetScrollY = Math.min(Math.max(targetScrollY + event.deltaY * 0.9, 0), maxScrollY());
+
+        if (animationFrameId === null) {
+          animationFrameId = requestAnimationFrame(animateScroll);
+        }
+      }, { passive: false });
+
+          const nav = document.getElementById('navi');
+          if (nav) {
+            nav.querySelectorAll('a').forEach((link) => {
+              link.addEventListener('click', () => {
+                if (window.innerWidth < 750) {
+                  nav.style.width = '0vw';
+                }
+              });
+            });
+          }
+        })();
+      </script>
   <script src="script.js"></script>
 </body>
 
