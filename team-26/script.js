@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { rootMargin: "200px 0px" }
+      { rootMargin: "200px 0px" },
     );
   }
 
@@ -58,33 +58,34 @@ function createMemberCard(member, role) {
   imageSection.className = "image-section";
 
   const img = document.createElement("img");
-  
+
   // Setup lightweight placeholder and actual source
-  img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
+  img.src =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
   img.dataset.src = member.image;
-  
+
   // Native lazy loading attributes
   img.setAttribute("loading", "lazy");
   img.setAttribute("decoding", "async");
 
-  // Generate CSS-friendly class names: first name (for shared styles) + full name slug (for unique targeting)
   const firstName = member.name.split(" ")[0].toLowerCase();
   const fullSlug = member.name.replace(/\s+/g, "").toLowerCase();
   img.className = `profile profile-${firstName} profile-${fullSlug} img-loading`;
   img.alt = member.name;
 
-  // Handle successful load for fade-in effect
   img.onload = function () {
-    // Check to ensure we are fading in the real image, not the placeholder
-    if (this.src !== "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E") {
+    if (
+      this.src !==
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+    ) {
       this.classList.remove("img-loading");
     }
   };
 
   // Handle image load error - gracefully fallback
   img.onerror = function () {
-    this.onerror = null; // Prevent infinite loop if fallback fails
-    this.src = "../logos/alchemy.png"; // Fallback if image not found
+    this.onerror = null;
+    this.src = "../logos/alchemy.png";
     this.classList.remove("img-loading");
   };
 
