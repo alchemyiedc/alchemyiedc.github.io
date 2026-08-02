@@ -1,0 +1,309 @@
+{
+  "Executive Committee": {
+    "Chief Strategic Officer": [
+      {
+        "name": "Hafis Mohammed K",
+        "image": "img/hafis.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/hafis-mohammed-k-0a8a4a291?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/hafis_mohammed_k?igsh=M3QwbnEyaHU1MGZl",
+          "github": "https://github.com/hafis2-cmd"
+        }
+      }
+    ],
+    "Student Lead": [],
+    "Operations Lead": [
+      {
+        "name": "Adhithyan AM",
+        "image": "img/Adhithyan A M.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/adhithyan-a-m-7baaa6334?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/adh1yee?igsh=MnQ5d2prdnJ0MDZq"
+        }
+      }
+    ],
+    "Technical Lead": [],
+    "Marketing Lead": [],
+    "Creative Lead": [],
+    "Women Innovation Lead": [],
+    "Community Lead": [],
+    "Finance Lead": [],
+    "Informations Lead": []
+  },
+
+  "Executive Teams": {
+    "Operations Team": [
+      {
+        "name": "AMEEN ANAS",
+        "image": "img/Ameen Anas.jpg",
+        "links": {
+          "linkedin": "https://linkedin.com/in/ameen-anas-45a776381",
+          "instagram": "https://instagram.com/amee__anas",
+          "github": "https://github.com/AMEE3103",
+          "twitter": "https://x.com/ameeans05"
+        }
+      },
+      {
+        "name": "Minnah Pattar Kadavan",
+        "image": "img/Minnah Operations Team - Minnah Ameenullah.jpeg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/minnah-ameenullah/",
+          "instagram": "https://www.instagram.com/min.dev_/",
+          "github": "https://github.com/minnahdev",
+          "twitter": "https://x.com/minnahdev"
+        }
+      },
+      {
+        "name": "Rifa K",
+        "image": "img/rifa.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/rifa-kalladi-a6a253419?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/__rifffaa?igsh=MWoyY3M4b3N3MTdjYw=="
+        }
+      }
+    ],
+    "Technical Team": [
+      {
+        "name": "Aromal A S",
+        "image": "img/Aromal A S.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/aromal1548",
+          "instagram": "https://www.instagram.com/aromal.1548",
+          "github": "https://github.com/zyndor1548",
+          "twitter": "https://x.com/Aromal1548"
+        }
+      },
+      {
+        "name": "Adithyan UP",
+        "image": "img/Adithyan U P.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/adithyan07/",
+          "instagram": "https://instagram.com/zeon_ig",
+          "github": "https://github.com/ZEON-07/"
+        }
+      },
+      {
+        "name": "Jeevan S",
+        "image": "img/jeevan.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/jeevansanal2872",
+          "instagram": "https://www.instagram.com/jeevansanal_2872",
+          "github": "https://github.com/Jeevansanal2872",
+          "twitter": "https://x.com/JeevanS25177049"
+        }
+      }
+    ],
+    "Marketing Team": [
+      {
+        "name": "Sidharth A",
+        "image": "img/Sidharth A.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/--sidharth-a-",
+          "instagram": "https://www.instagram.com/_.koottu._?igsh=dmx6dm02NTM3d3J6"
+        }
+      },
+      {
+        "name": "Navaneeth Krishna A",
+        "image": "img/Navaneeth Krishna.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/navaneethkrishnaa?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/itsnavaneeth.__?igsh=MXA4YTNsbWtqangycA==",
+          "twitter": "https://x.com/Navaneethhhhhh"
+        }
+      },
+      {
+        "name": "Manha T J",
+        "image": "",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/manha-t-j-97a864379?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+          "instagram": "https://www.instagram.com/_justt.manhaaa_?igsh=MTl1b25lbHRvemJucw%3D%3D&utm_source=qr",
+          "github": "https://github.com/Manha-tech"
+        }
+      },
+      {
+        "name": "Sreelekshmi BS",
+        "image": "",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sreelekshmi-b-nair-635401380",
+          "instagram": "https://www.instagram.com/sreeleksh_mi__?igsh=MWYyYXFwemxkMDJvMA==",
+          "github": "https://github.com/sreelekshmi827"
+        }
+      },
+      {
+        "name": "Nandana J V",
+        "image": "img/nandana jesudas.webp",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/nandana-j-v-32779737a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/nandnah_jesudas?igsh=MW9kcGo3amJuNzNuMQ==",
+          "github": "https://github.com/nandanajesudas"
+        }
+      }
+    ],
+    "Creative Team": [
+      {
+        "name": "Muhammad Faizal A.S",
+        "image": "img/Muhammad Faizal.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/muhammad-faizal-a-s-ab8448291",
+          "instagram": "https://www.instagram.com/aimfaizi",
+          "github": "https://github.com/faizalfaizi41185",
+          "twitter": "https://x.com/Fyro75965896"
+        }
+      },
+      {
+        "name": "Reema Rinu",
+        "image": "img/Reema Rinu.jpeg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/reema-rinu-71074b37b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+          "instagram": "https://www.instagram.com/reem_zzz____?igsh=N2o2bGwyeWxnZmZ4&utm_source=qr"
+        }
+      },
+      {
+        "name": "Kalyani R",
+        "image": "img/kalyani.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/kalyani-r-386575380?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/kalyani__r____?igsh=MXJhdTdoMWVheGxjaQ==",
+          "github": "https://github.com/kalyanir2807-blip"
+        }
+      },
+      {
+        "name": "Ananjima A A",
+        "image": "img/Ananjima A A.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/ananjima-a-a-65b7ab37a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/cassadore_sols?igsh=M3h2dGd3NmFiMG03"
+        }
+      },
+      {
+        "name": "Gautham K K",
+        "image": "img/Gautham KK.jpg",
+        "links": {
+          "linkedin": "https://linkedin.com/in/gautham-kk/",
+          "instagram": "https://instagram.com/kk.gautham",
+          "github": "https://github.com/Gauthkk30"
+        }
+      }
+    ],
+    "Research Team": [
+      {
+        "name": "Sreelekshmi AR",
+        "image": "",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sreelekshmi-ar-8b4a3738a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/__.sre__e_?igsh=eXVrbjZ6eGt6czh3"
+        }
+      },
+      {
+        "name": "Vismaya V S",
+        "image": "",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/vismaya-v-s-2351a6380?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/mizz__vizz?igsh=bHZsZ2xoY284MjI5"
+        }
+      },
+      {
+        "name": "Yusuf Shanavas",
+        "image": "img/Yusuf Shanavas.jpg",
+        "links": {
+          "linkedin": "",
+          "instagram": "",
+          "github": ""
+        }
+      }
+    ],
+    "Women Entrepreneurship Team": [
+      {
+        "name": "Malavika B",
+        "image": "img/Malavika B.jpeg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/malavika-b-234751351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "instagram": "https://www.instagram.com/_x.anika_?igsh=OTUxeDl1anFxdmdh"
+        }
+      },
+      {
+        "name": "Amrutha Manoj",
+        "image": "img/Amrutha Manoj.jpg",
+        "links": {
+          "linkedin": "https://linkedin.com/in/amrutha-manoj524",
+          "instagram": "https://instagram.com/_am__rithaa__",
+          "github": "https://github.com/Am-rutha"
+        }
+      },
+      {
+        "name": "NADIYA S",
+        "image": "img/Nadiya S.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/nadiya-s-1877b337a",
+          "instagram": "https://www.instagram.com/__.nadi_ya.__?igsh=MWF6djB0aWdzMHIzNw==",
+          "github": "https://github.com/Nadiyashamnad"
+        }
+      }
+    ],
+    "Community Team": [
+      {
+        "name": "Asmiya H",
+        "image": "img/Asmiya Hassain.jpeg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/asmiya-hassain-bb358537a",
+          "instagram": "https://www.instagram.com/__azmi_ya__?igsh=MWkxM2phajJ1aXZ5bg%3D%3D&utm_source=qr",
+          "github": "https://github.com/Asmiyasmi"
+        }
+      },
+      {
+        "name": "Shemeem Shajahan",
+        "image": "img/Shemeem Shajahan.jpeg",
+        "links": {
+          "linkedin": "https://linkedin.com/in/shemeem-shajahan-747a42205",
+          "instagram": "https://www.instagram.com/shemeem_sha?igsh=cHFzcnA2bTM4NDB1&utm_source=qr",
+          "github": "https://github.com/angelic444"
+        }
+      },
+      {
+        "name": "S. Krishnapriya",
+        "image": "img/Krishnapriya S.png",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/s-krishna-priya-7148a8395?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/__its_me_krishnapriya__?igsh=eGQ3NHg5a2o2eHp3",
+          "github": "https://github.com/skrishnapriya1806-commits"
+        }
+      },
+      {
+        "name": "FehdaFaizy",
+        "image": "img/Fehda Faizy.jpeg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/fehda-faizy-ab0913378?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+          "instagram": "https://www.instagram.com/fehdafaizy?igsh=NjVwYTE1MmQ3d2Q5&utm_source=qr"
+        }
+      }
+    ],
+    "Finance Team": [
+      {
+        "name": "Aswini s",
+        "image": "img/Aswini S.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/aswini-s-3619143b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          "instagram": "https://www.instagram.com/_aswini_sree_?igsh=MXBpbTYwaGY2NHc5eQ==",
+          "github": "https://github.com/aswinis-creator"
+        }
+      },
+      {
+        "name": "SIDHARTH A",
+        "image": "img/SIDHARTH A- Event Coordinator - SIDHARTH. A.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sidharth-a-a31567412?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        }
+      },
+      {
+        "name": "Muhammed S",
+        "image": "img/muhammed.jpg",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/muhammed-salim-0372b4283",
+          "instagram": "https://www.instagram.com/smuhammed._/",
+          "github": "https://github.com/muhammeds88",
+          "twitter": "https://x.com/muhammed_s88"
+        }
+      }
+    ]
+  }
+}
