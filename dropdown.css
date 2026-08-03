@@ -3,17 +3,14 @@
   display: inline-flex;
   align-items: center;
   height: 30px;
-  /* extend hover area downward to bridge gap to dropdown panel */
   padding-bottom: 18px;
   margin-bottom: -18px;
 }
-/* Animate the .dropdown wrapper like other nav items */
 .nav > .dropdown {
   transform: translateX(50px);
   opacity: 0;
   color: #9b0eff;
 }
-/* nth-child targeting — dropdown is the 2nd child of .nav (after Home) */
 .nav > .dropdown:nth-child(2) {
   animation:
     slide 1s forwards 0.6s,
@@ -30,13 +27,11 @@
     colorchange 1s forwards 1s;
 }
 
-/* The <a> trigger inside dropdown: match .header a styling */
 .dropdown > a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Only suppress the hover effects (underline + gradient) — leave default state alone */
 .dropdown > a:hover,
 .dropdown > a:hover > p,
 .nav .dropdown > a:hover,
@@ -54,31 +49,23 @@
   display: none;
   position: absolute;
   right: -30px;
-  /* sit flush under the button — visual gap is handled by border/padding */
   top: 100%;
-  padding-top: 8px; /* invisible bridge so mouse doesn't lose hover */
+  padding-top: 8px;
   background-color: transparent;
   min-width: 150px;
   z-index: 100;
   flex-direction: column;
 }
-/* the actual visible panel */
 .dropdown-content::before {
   content: "";
   display: block;
-  height: 8px; /* matches padding-top, invisible hover bridge */
+  height: 8px;
 }
 .dropdown-content-inner,
 .dropdown-content > a {
   background-color: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(14px);
 }
-/* wrap all links inside a styled panel */
-.dropdown-content {
-  /* we style the panel via box-shadow/border on the first child block */
-}
-
-/* reset: style each link row directly and use a container trick via flex */
 .dropdown-content a {
   color: #fff !important;
   padding: 12px 18px;
