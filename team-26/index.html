@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEDC EXECOM 2025-'26</title>
+    <link rel="stylesheet" type="text/css" href="/app.css" />
+    <link rel="stylesheet" type="text/css" href="/dropdown.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: #000;
+        color: #fff;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .logo-top {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 500;
+      }
+
+      .logo-top img {
+        height: 40px;
+        width: auto;
+        filter: invert(1);
+      }
+
+      section {
+        background: #000;
+        padding: 80px 60px 80px 60px;
+        text-align: center;
+      }
+
+      section h2 {
+        color: #fff;
+        margin-bottom: 60px;
+        font-size: 32px;
+      }
+
+      .cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-content: center;
+        /* Center cards when there are fewer than 5 */
+        grid-auto-rows: minmax(min-content, max-content);
+        /* Adjust row height based on content */
+        gap: 50px 40px;
+        /* vertical gap 50px, horizontal gap 40px */
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .container {
+        height: 320px;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+        border: 2px solid;
+        border-left-color: #0cf;
+        border-top-color: #0cf;
+        border-right-color: #f0f;
+        border-bottom-color: #f0f;
+        border-radius: 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+      }
+
+      .container .image-section {
+        height: 105%;
+        width: 105%;
+        background-image: url("https://i.pinimg.com/1200x/3a/73/92/3a7392768edc0eade890b907e110ef0c.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.6s ease;
+      }
+
+      .container:hover .image-section {
+        top: 10%;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      img.profile {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #021a2f;
+        object-fit: cover;
+        object-position: top;
+        transition:
+          opacity 0.4s ease-out,
+          filter 0.4s ease-out;
+      }
+
+      .img-loading {
+        opacity: 0;
+        filter: blur(8px);
+      }
+
+      img.profile-muhammed,
+      img.profile-muhammad,
+      img.profile-adhithyan {
+        object-position: center;
+      }
+
+      img.profile-prevdha,
+      img.profile-sreelekshmiar {
+        object-position: center 30%;
+      }
+      img.profile-muhammed {
+        transform: scale(0.95);
+      }
+      img.profile-sreelekshmi {
+        object-position: center 5%;
+      }
+      img.profile-nandananair {
+        object-position: center 50%;
+      }
+      .text-content {
+        text-align: center;
+        color: beige;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      .container:hover .text-content {
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
+
+      .text-content span:nth-child(1) {
+        font-size: 20px;
+      }
+
+      .text-content span:nth-child(2) {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      .social-media {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .social-media i {
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        border: 2px solid #0cf;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #0cf;
+        transition: 0.5s;
+      }
+
+      .social-media i:hover {
+        box-shadow: 0 0 10px #0cf;
+        color: #222;
+        background: #0cf;
+      }
+
+      @media (min-width: 1200px) {
+        .cards-wrapper {
+          grid-template-columns: repeat(5, 1fr);
+          /* 5 cards per row on larger screens */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        src="/assets/alchemy.png"
+        id="headerIMG"
+        onclick="location.href = '/'"
+      />
+
+      <div id="openNav">
+        <span class="material-symbols-sharp"> menu </span>
+      </div>
+      <div class="nav" id="navi">
+        <a href="/">
+          <p>Home</p>
+        </a>
+        <a href="/legacy/">
+          <p>Legacy</p>
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Executive Committee</h2>
+      <div class="cards-wrapper" id="executive-committee">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
+    <section>
+      <h2>Executive Teams</h2>
+      <div class="cards-wrapper" id="executive-teams">
+        <!-- Content loaded dynamically from members.json -->
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

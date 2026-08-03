@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy | Alchemy IEDC CEAL</title>
+    <link rel="stylesheet" type="text/css" href="/app.css" />
+    <link rel="stylesheet" type="text/css" href="/dropdown.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: #000;
+        color: #fff;
+        min-height: 100vh;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      section {
+        background: #000;
+        padding: 120px 60px 80px 60px;
+        text-align: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+      section h2 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-family: "Outfit", sans-serif;
+      }
+      section p.desc {
+        color: #ff0000;
+        margin-bottom: 60px;
+        font-size: 16px;
+      }
+      .legacy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .legacy-card {
+        border: 2px solid;
+        border-left-color: #0cf;
+        border-top-color: #0cf;
+        border-right-color: #f0f;
+        border-bottom-color: #f0f;
+        border-radius: 15px;
+        padding: 60px 20px;
+        transition: 0.3s ease;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .legacy-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .legacy-card h3 {
+        font-size: 28px;
+        font-family: "Outfit", sans-serif;
+        margin: 0 0 10px 0;
+        background: linear-gradient(121deg, #b73aff, #72efdd);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .legacy-card .role {
+        margin: 0;
+        color: #ddd;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="/assets/alchemy.png"
+        id="headerIMG"
+        onclick="location.href = '/'"
+      />
+      <div id="openNav">
+        <span class="material-symbols-sharp"> menu </span>
+      </div>
+      <div class="nav" id="navi">
+        <a href="/">
+          <p>Home</p>
+        </a>
+        <!-- <a href="/legacy/">
+          <p>Legacy</p>
+        </a> -->
+      </div>
+    </header>
+
+    <section>
+      <h2>Legacy Teams</h2>
+
+      <div class="legacy-grid">
+        <!-- <a href="/team-26/" class="legacy-card">
+          <h3>Team 2026</h3>
+          <div class="role">Executive Committee</div>
+        </a> -->
+        <a href="/team-25/" class="legacy-card">
+          <h3>Team 2025</h3>
+          <div class="role">Executive Committee</div>
+        </a>
+        <a href="/team-24/" class="legacy-card">
+          <h3>Team 2024</h3>
+          <div class="role">Executive Committee</div>
+        </a>
+        <a href="/team-23/" class="legacy-card">
+          <h3>Team 2023</h3>
+          <div class="role">Executive Committee</div>
+        </a>
+      </div>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,4 +1,24 @@
+let lazyImageObserver;
+
 document.addEventListener('DOMContentLoaded', () => {
+  if ("IntersectionObserver" in window) {
+    lazyImageObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute("data-src");
+            }
+            observer.unobserve(img);
+          }
+        });
+      },
+      { rootMargin: "200px 0px" }
+    );
+  }
+
   fetch('members.json')
     .then(response => response.json())
     .then(data => {
@@ -38,16 +58,41 @@ function createMemberCard(member, role) {
   imageSection.className = 'image-section';
   
   const img = document.createElement('img');
-  img.src = member.image;
+  
+  // Setup lightweight placeholder and actual source
+  img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
+  img.dataset.src = member.image;
+  
+  // Native lazy loading attributes
+  img.setAttribute("loading", "lazy");
+  img.setAttribute("decoding", "async");
+
   // Generate CSS-friendly class name from first name (lowercase, no spaces)
   const firstName = member.name.split(' ')[0].toLowerCase();
-  img.className = `profile profile-${firstName}`;
+  img.className = `profile profile-${firstName} img-loading`;
   img.alt = member.name;
   
-  // Handle image load error - optional fallback or just let it break
-  img.onerror = function() {
-    this.src = 'logos/alchemy.png'; // Fallback if image not found
+  // Handle successful load for fade-in effect
+  img.onload = function () {
+    if (this.src !== "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E") {
+      this.classList.remove("img-loading");
+    }
   };
+
+  // Handle image load error - gracefully fallback
+  img.onerror = function() {
+    this.onerror = null; // Prevent infinite loop
+    this.src = '../logos/alchemy.png'; // Fallback if image not found
+    this.classList.remove("img-loading");
+  };
+
+  // Observe for lazy loading or fallback to immediate load
+  if (typeof lazyImageObserver !== "undefined") {
+    lazyImageObserver.observe(img);
+  } else {
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+  }
 
   imageSection.appendChild(img);
   container.appendChild(imageSection);
